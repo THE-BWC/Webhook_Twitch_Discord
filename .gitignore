@@ -1,0 +1,12 @@
+# Ignore Idea files
+/.idea
+*.iml
+
+# Ignore Modules
+/node_modules
+
+# Ignore Bot Files
+.env
+package-lock.json
+ecosystem.config.js
+Twitch-API-Discord.log

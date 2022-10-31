@@ -1,0 +1,13 @@
+{
+  "message": "Hey! **{streamer}** has just gone live at https://twitch.tv/{url}",
+  "streamers": [
+    "theblackwidowcompany",
+    "fireflybwc",
+    "g_l0k",
+    "shadow_degrifter",
+    "draziwgg",
+    "fluffulupigaz",
+    "spacepuma101",
+    "archangelone"
+  ]
+}
