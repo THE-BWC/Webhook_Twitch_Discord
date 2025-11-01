@@ -4,26 +4,15 @@ const { WebhookClient, MessageEmbed } = require('discord.js');
 const { setIntervalAsync } = require('set-interval-async/dynamic')
 const config = require('./config.json')
 
-
 /**
  * Logger
  */
 let logger = Winston.createLogger({
     transports: [
-        new Winston.transports.File({ filename: 'Twitch-API-Discord.log' })
+        new Winston.transports.Console({ format: Winston.format.simple() })
     ],
     format: Winston.format.printf((log) => `[${new Date().toLocaleString()}] - [${log.level.toUpperCase()}] - ${log.message}`)
 })
-
-/**
- * Outputs to console during Development
- */
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-    logger.add(new Winston.transports.Console({
-        format: Winston.format.simple()
-    }))
-}
 
 let initialized = 0
 let streamerStatusCache = {}
